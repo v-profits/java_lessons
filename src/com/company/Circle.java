@@ -20,6 +20,10 @@ public class Circle {
         radius = r;
         color = c;
     }
+    public void setCircle(double radius, String color){
+        this.radius = radius;
+        this.color = color;
+    }
 
     public double getRadius() {
         return radius;
