@@ -1,4 +1,5 @@
 package com.company;
+//коммент для проверки коммита
 
 public class Main {
     public static void main(String[] args) {
