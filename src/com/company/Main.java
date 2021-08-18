@@ -1,5 +1,5 @@
 package com.company;
-//коммент для проверки коммита
+//тест
 
 public class Main {
     public static void main(String[] args) {

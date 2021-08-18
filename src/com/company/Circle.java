@@ -1,5 +1,5 @@
 package com.company;
-//коммент для проверки коммита
+//тест
 
 public class Circle {
     public static final double RADIUS = 1;
