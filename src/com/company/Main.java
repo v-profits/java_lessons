@@ -4,16 +4,25 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
 
-        Circle c1 = new Circle();
-        System.out.println(c1.toString()); // явный вызов метода toString()
-        System.out.println(c1); //неявное обращение к c1.toString()
-        System.out.println("Объект c1 это: " + c1); //'+' вызывает c1.toString(), чтобы получить строку до конкатенации
+        Time t1 = new Time();
+        System.out.println(t1);
 
-        //выполнение задание 1, глава 1
-        System.out.println("Радиус с1: " + c1.getRadius());
-        System.out.println("Цвет с1: " + c1.getColor());
-        System.out.println("Площадь c1: " + c1.getArea());
-        System.out.println(c1);
+        Time t2 = new Time(1,2,3);
+        for(int i = 0; i < 2; ++i)
+            System.out.println(t2.nextSecond());
+
+        t2.setHour(4);
+        t2.setMinute(5);
+        t2.setSecond(60);
+        System.out.println(t2);
+        System.out.println("Hour: " + t2.getHour());
+        System.out.println("Minute: " + t2.getMinute());
+        System.out.println("Secund: " + t2.getSecond());
+
+        t2.setTime(23,59,58);
+        System.out.println(t2);
+        System.out.println(t2.nextSecond());
+        System.out.println(t2.nextSecond().nextSecond().nextSecond());
 
     }
 }
