@@ -1,4 +1,5 @@
 package com.company;
+//коммент для проверки коммита
 
 public class Circle {
     public static final double RADIUS = 1;
@@ -34,5 +35,4 @@ public class Circle {
         return "Paдиyc = " + this.radius + ", Цвет - " + this.color +
                 ", Площадь = " + this.getArea();
     }
-    //коммент для проверки коммита
 }
