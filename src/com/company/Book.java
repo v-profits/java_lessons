@@ -1,63 +1,65 @@
 package com.company;
 
-import static java.lang.String.format;
-
 public class Book {
-    private String author;
-    private String name;
+    private final String name;
+    private final Author author;
     private double price;
     private int quantity;
 
-    Book(String author, String name, double price, int quantity) {
+    Book(Author author, String name, double price, int quantity) {
         this.author = author;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
-    Book(String author, String name) {
+    Book(Author author, String name) {
         this.author = author;
         this.name = name;
         this.price = 0.0;
         this.quantity = 0;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-        System.out.println("Change price book: " + price);
-        System.out.println();
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-        System.out.println("Change quantity books: " + quantity);
-        System.out.println();
-    }
-
-    public String getAuthor() {
-        return this.author;
-    }
-
+    //==================================
     public String getName() {
         return this.name;
+    }
+
+    public Author getAuthor() {
+        return this.author;
     }
 
     public double getPrice() {
         return this.price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+//        System.out.println("Change price book: " + price);
+//        System.out.println();
+    }
+
     public int getQuantity() {
         return this.quantity;
     }
 
-    public String toString() {
-        //return format("Book: %s \nAuthor: %s \nName: %s \nPrice: %0.2f \nQuantity: %d", author, name, price, quantity);
-        return "Book:\nAuthor: " + author + "\nName: " + name + "\nPrice: " + price + "\nQuantity: " + quantity + "\n";
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+//        System.out.println("Change quantity books: " + quantity);
+//        System.out.println();
     }
 
-    public void addBook(int add) {
+    //=================================
+    public String toString() {
+        //return format("Book: %s \nAuthor: %s \nName: %s \nPrice: %0.2f \nQuantity: %d", author, name, price, quantity);
+        return "Автор: " + author + "Книга:\nназвание книги: " + name +
+                "\nцена: " + price + "$\nколичество: " + quantity + "\n";
+    }
+
+    //====================================
+    public void addBooks(int add) {
         quantity += add;
-        System.out.println("Add book: " + add);
-        System.out.println();
+//        System.out.println("Add book: " + add);
+//        System.out.println();
     }
 }

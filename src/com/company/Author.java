@@ -1,7 +1,7 @@
 package com.company;
 
 public class Author {
-    private String name;
+    private final String name;
     private String email;
 
     Author(String name, String email) {
@@ -19,10 +19,10 @@ public class Author {
 
     public void setEmail(String email) {
         this.email = email;
-        System.out.println("change to email: " + email + "\n");
+        System.out.println("новый email: " + email + "\n");
     }
 
     public String toString() {
-        return "Author:\nname: " + name + "\nemail: " + email + "\n";
+        return "\nназвание книги: " + name + "\nemail: " + email + "\n";
     }
 }
