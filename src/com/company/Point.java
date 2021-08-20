@@ -1,10 +1,13 @@
 package com.company;
 
 public class Point {
-    private int x = 0;
-    private int y = 0;
+    private int x;
+    private int y;
 
-    Point() {}
+    Point() {
+        x = 0;
+        y = 0;
+    }
     Point(int x, int y) {
         this.x = x;
         this.y = y;
@@ -13,8 +16,9 @@ public class Point {
     public void setX(int x) { this.x = x; }
     public int getY() { return this.y; }
     public void setY(int y) { this.y = y; }
-    public String toString() { return "x = " + x + "; y = " + y + "\n"; }
-    public int[] getXY() { return new int[]{x, y}; } //+getXY():int[2]
+    public String toString() { return "(" + x + ", " + y + ")\n"; }
+    public int[] getXY() { return new int[]{this.x, this.y}; } //+getXY():int[2]
+
     public void setXY(int x, int y) {
         this.x = x;
         this.y = y;
