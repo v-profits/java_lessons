@@ -3,24 +3,32 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
 
-        Author Ivanov = new Author("Ivanov","ivan@mail.ru");
-        System.out.println(Ivanov);
+        Point p = new Point();
+        System.out.print(p);
 
-        Book bookNext1 = new Book(Ivanov, "Istory Java", 1.55, 2000);
-        System.out.println(bookNext1);
-        bookNext1.setPrice(1.60);
-        bookNext1.setQuantity(1800);
-        bookNext1.addBooks(300);
-        System.out.println("Название: " + bookNext1.getName());
-        System.out.println("Цена: " + bookNext1.getPrice());
-        System.out.println("Количество: " + bookNext1.getQuantity());
-        System.out.println("Автор: " /*+ bookNext1.getAuthor()*/);
-        System.out.println("имя автора: " + bookNext1.getAuthor().getName());
-        System.out.println("email автора: " + bookNext1.getAuthor().getEmail());
-        System.out.println();
+        Point point = new Point(2,3);
+        System.out.print(point);
 
-        Book bookNext2 = new Book(new Author("Petrov","piter@mail.ru"), "Java для профи", 3.05, 3900);
-        System.out.println(bookNext2);
+        Point another = new Point(5, 7);
+        System.out.print(another);
+
+        System.out.println("Дистанция 1 = " + point.distance(4, 6));
+        System.out.println("Дистанция 2 = " + point.distance(another));
+        System.out.println("Дистанция 3 = " + point.distance());
 
     }
 }
+//        -x:int=O
+//        -y:int=O
+//        +Point()
+//        +Point(x:int, y:int)
+//        +getX():int
+//        +setX(x:int):void
+//        +getY():int
+//        +setY(y:int):void
+//        +toString(): String
+//        +getXY():int[2]
+//        +setXY(x:int, y:int):void
+//        +distance(x:int, y:int):double
+//        +distance(another:Point):double
+//        +distance():double
