@@ -38,6 +38,23 @@ public class Line {
     public double getGradient() {
         int xx = Math.abs(this.getBeginX() - this.getEndX());
         int yy = Math.abs(this.getBeginY() - this.getEndY());
-        return Math.toDegrees(1.0 * yy / xx);
+        return Math.toDegrees(1.0 * yy / xx) % 90;
+    }
+
+    //=== глава 2, задание 5
+    //р – половина периметра, a, b, c - стороны, h – высота, формула: h = 2/a √p(p-a) (p-b) (p-c)
+    public double distance(int x, int y) {
+        double a = Math.abs(this.getLength());
+        double b = Math.abs(this.begin.distance(x, y));
+        double c = Math.abs(this.end.distance(x, y));
+        double p = (a + b + c) / 2;
+        return Math.sqrt(p*(p-a)*(p-b)*(p-c))*2/a;
+    }
+    public double distance(Point point) {
+        double a = Math.abs(this.getLength());
+        double b = Math.abs(this.begin.distance(point));
+        double c = Math.abs(this.end.distance(point));
+        double p = (a + b + c) / 2;
+        return Math.sqrt(p*(p-a)*(p-b)*(p-c))*2/a;
     }
 }
