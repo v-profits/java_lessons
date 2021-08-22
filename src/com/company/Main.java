@@ -3,15 +3,14 @@ package com.company;
 public class Main {
     public static void main(String[] args){
 
-        System.out.println(new Cylinder());
-        System.out.println(new Cylinder(3, 2, 5, 2.5));
-        Cylinder cylinder = new Cylinder(new Point(5, 7), 2.5, 4);
-        System.out.println(cylinder);
+        Point3D p1 = new Point3D();
+        System.out.println(p1);
 
-        System.out.println("====================================\n\nX = " + cylinder.getCenterX() +
-                "\nY = " + cylinder.getCenterY() + "\nRadius = " + cylinder.getRadius() +
-                "\nHeigth = " + cylinder.getHeigth() + "\nArea = " + cylinder.getArea() +
-                "\nValume = " + cylinder.getValume());
+        Point3D p2 = new Point3D(2, 3, 4);
+        System.out.println(p2);
+
+        Point3D p3 = new Point3D(new Point(4,5), 6);
+        System.out.println(p3);
 
     }
 }
