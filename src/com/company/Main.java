@@ -1,16 +1,18 @@
 package com.company;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
-        //=== глава 2, задание 4
-        Line line = new Line(new Point(2, 4), new Point(34, 145));
-        System.out.println(line);
-        System.out.printf("Угол наклона к оси X: %.2f градусов\n", line.getGradient());
+        System.out.println(new Cylinder());
+        System.out.println(new Cylinder(3, 2, 5, 2.5));
+        Cylinder cylinder = new Cylinder(new Point(5, 7), 2.5, 4);
+        System.out.println(cylinder);
 
-        //=== глава 2, задание 5
-        System.out.printf("Расстояние: %.2f%n", line.distance(16, 38));
-        Point point = new Point(16, 38);
-        System.out.printf("Расстояние: %.2f%n", line.distance(point));
+        System.out.println("====================================\n\nX = " + cylinder.getCenterX() +
+                "\nY = " + cylinder.getCenterY() + "\nRadius = " + cylinder.getRadius() +
+                "\nHeigth = " + cylinder.getHeigth() + "\nArea = " + cylinder.getArea() +
+                "\nValume = " + cylinder.getValume());
+
     }
 }
+
