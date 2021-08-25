@@ -1,6 +1,6 @@
 package com.company;
 
-public class Rectangle extends Shape_2 {
+public class Rectangle extends Shape_2 { //
     private double length;
     private double width;
     //===

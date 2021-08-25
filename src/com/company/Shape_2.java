@@ -1,5 +1,5 @@
 package com.company;
-public class Shape_2 {
+public abstract class Shape_2 {
     private String color;
     private boolean filled;
     //===
@@ -21,10 +21,10 @@ public class Shape_2 {
         return true;
     }
     //@Override
-    public double getArea() {
+    public abstract double getArea(); /*{
         System.out.println("Площадь фигуры неопределена, отсутствуют данные");
         return 0;
-    }
+    }*/
     //@Override
     public String toString() {
         return "color = " + color + "\nfilled = " + filled + "\n";

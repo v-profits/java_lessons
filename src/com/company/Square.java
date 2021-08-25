@@ -1,6 +1,6 @@
 package com.company;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle { //
     public Square() {
         super();
     }
