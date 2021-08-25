@@ -1,30 +1,26 @@
 package com.company;
 
-public class Square extends Rectangle { //
-    public Square() {
-        super();
-    }
-    public Square(double side) {
-        super(side, side);
-    }
+public class Square extends Rectangle {
+    //===
+    public Square() { super(); }
+    public Square(double side) { super(side, side); }
     public Square(double side, String color, boolean filled) {
         super(side, side, color, filled);
     }
     //===
-    public double getSide() {
-        return super.getLength();
-    }
     @Override
     public String toString() {
-        return "color = " + this.getColor() + "\nfilled = " + this.isFilled() +
-                "\nside = " + this.getLength() + "\nperimeter = " + this.getPerimeter() +
-                "\narea = " + this.getArea() + "\n";
+        return "\n\ncolor: " + super.getColor() + "\nfilled: " + super.isFilled() +
+                "\nside: " + super.getLength();
     }
+    @Override
+    public double getArea() { return super.getArea(); }
+    @Override
+    public double getPerimeter() { return super.getPerimeter(); }
+    public double getSide() { return super.getLength(); }
     //===
-    public void setLingth(double side) {
+    public void setSide(double side) {
         super.setLength(side);
-    }
-    public void setWidth(double side) {
         super.setWidth(side);
     }
 }

@@ -2,14 +2,21 @@ package com.company;
 
 public abstract class Shape {
     //===
-    private String color;
+    protected String color;
+    protected boolean filled;
     //===
-    Shape() { this.color = "red"; }
-    Shape(String color) { this.color = color; }
+    public Shape() { color = "red"; filled = true; }
+    public Shape(String color, Boolean filled) { this.color = color; this.filled = filled; }
     //===
+    public String getColor() { return color; }
+    public Boolean isFilled() { return filled; }
     public abstract double getArea();
+    public abstract double getPerimeter();
     @Override
     public String toString() {
-        return "color = \"" + color + "\"\n";
+        return "\ncolor: " + color + "\nfilled: " + filled;
     }
+    //===
+    public void setColor() { this.color = color; }
+    public void setFilled() { this.filled = filled; }
 }
