@@ -1,14 +1,15 @@
 package com.company;
 
-public class Shape {
+public abstract class Shape {
+    //===
     private String color;
-
+    //===
+    Shape() { this.color = "red"; }
     Shape(String color) { this.color = color; }
-    //@Override
-    public double getArea() {
-        System.out.println("Площадь фигуры неизвестна");
-        return 0;
-    }
+    //===
+    public abstract double getArea();
     @Override
-    public String toString() { return "color = " + color + "\n"; }
+    public String toString() {
+        return "color = \"" + color + "\"\n";
+    }
 }

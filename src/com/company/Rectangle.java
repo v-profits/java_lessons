@@ -1,6 +1,7 @@
 package com.company;
 
-public class Rectangle extends Shape_2 { //
+public class Rectangle extends Shape {
+    //===
     private double length;
     private double width;
     //===
@@ -9,13 +10,13 @@ public class Rectangle extends Shape_2 { //
         this.length = 1;
         this.width = 1;
     }
-    public Rectangle(double length, double width) {
+    public Rectangle(double length) {
         super();
         this.length = length;
         this.width = width;
     }
-    public Rectangle(double length, double width, String color, boolean filled) {
-        super(color, filled);
+    public Rectangle(String color, double length, double width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -26,19 +27,18 @@ public class Rectangle extends Shape_2 { //
     public double getWidth() {
         return this.width;
     }
-    //@Override
     public double getPerimeter() {
         return 2 * (length + width);
     }
-    @Override
+//    @Override
     public double getArea() {
         return length * width;
     }
     @Override
     public String toString() {
-        return "" + super.toString() + "length = " + length +
+        return "\nRectangle:\n" + super.toString() + "length = " + length +
                 "\nwidth = " + width + "\nperimeter = " + this.getPerimeter() +
-                "\narea = " + this.getArea() + "\n";
+                "\narea = " + this.getArea();
     }
     //===
     public void setLength(double length) {
