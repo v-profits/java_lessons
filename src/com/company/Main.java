@@ -3,11 +3,15 @@ package com.company;
 public class Main {
     public static void main(String[] args) {
 
-        Shape c = new Circle(3, "blue", true);
-        Shape r = new Rectangle(4, 5, "green", false);
-        Shape s = new Square(2, "black", true);
+        Movable ml = new MovablePoint(5, 6,10); // апкастинг
+        System.out.println(ml);
+        ml .moveLeft();
+        System.out.println(ml);
+        Movable m2 = new MovableCircle(2,1,2,20); // апкастинг
+        System.out.println(m2);
+        m2.moveRight();
+        System.out.println(m2);
 
-        System.out.println(c + "" + r + s);
 
     }
 }

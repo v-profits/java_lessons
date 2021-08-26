@@ -25,4 +25,5 @@ public class MovablePoint implements Movable {
     public String toString() {
         return "\nPoint(" + x + ", " + y + ");";
     }
+
 }
